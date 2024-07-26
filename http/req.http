@@ -1,0 +1,79 @@
+### Adicionar Aluno
+POST http://localhost:3000/alunos
+Content-Type: application/json
+
+{
+  "nome": "João da Silva",
+  "matricula": "20230001",
+  "dataNascimento": "2000-01-01",
+  "curso": "Engenharia de Software"
+}
+
+### Atualizar Aluno
+PUT http://localhost:3000/alunos/1
+Content-Type: application/json
+
+{
+  "nome": "João da Silva Atualizado",
+  "matricula": "20230001",
+  "dataNascimento": "2000-01-01",
+  "curso": "Engenharia de Software"
+}
+
+### Remover Aluno
+DELETE http://localhost:3000/alunos/1
+
+### Listar Alunos
+GET http://localhost:3000/alunos
+
+### Adicionar Disciplina
+POST http://localhost:3000/disciplinas
+Content-Type: application/json
+
+{
+  "nome": "Matemática",
+  "codigo": "MAT101",
+  "professor": "Prof. Carlos Souza"
+}
+
+### Atualizar Disciplina
+PUT http://localhost:3000/disciplinas/1
+Content-Type: application/json
+
+{
+  "nome": "Matemática Avançada",
+  "codigo": "MAT101",
+  "professor": "Prof. Carlos Souza"
+}
+
+### Remover Disciplina
+DELETE http://localhost:3000/disciplinas/{id_da_disciplina}
+
+### Listar Disciplinas
+GET http://localhost:3000/disciplinas
+
+### Adicionar Nota
+POST http://localhost:3000/notas
+Content-Type: application/json
+
+{
+  "alunoId": 1,
+  "disciplinaId": 1,
+  "nota": 9.5,
+  "dataAvaliacao": "2024-07-25"
+}
+
+### Atualizar Nota
+PUT http://localhost:3000/notas/{id_da_nota}
+Content-Type: application/json
+
+{
+  "nota": 9.8,
+  "dataAvaliacao": "2024-07-26"
+}
+
+### Remover Nota
+DELETE http://localhost:3000/notas/{id_da_nota}
+
+### Listar Notas
+GET http://localhost:3000/notas
